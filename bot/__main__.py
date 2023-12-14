@@ -58,24 +58,24 @@ from .modules import (
 
 async def start(client, message):
     buttons = ButtonMaker()
-    buttons.url_buildbutton("Repo", "https://github.com/Sam-Max/rcmltb")
-    buttons.url_buildbutton("Owner", "https://github.com/Sam-Max")
+    buttons.url_buildbutton("Owner", "https://Steyhist.t.me")
+    buttons.url_buildbutton("Info", "https://t.me/steyhiststuff")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.user_filter or CustomFilters.chat_filter:
         msg = """
-**Hello, ¡Welcome to Rclone-Telegram-Bot!\n
-I can help you copy files from one cloud to another.
-I can also can mirror-leech files and links to Telegram or cloud**\n\n
+**Halo, ¡Selamat datang di Histeria-MLTB!\n
+Saya dapat membantu Anda menyalin file dari satu cloud ke cloud lainnya.
+Saya juga dapat melakukan mirror-leech file dan tautan ke Telegram atau cloud**\n\n
         """
         await sendMarkup(msg, message, reply_markup)
     else:
         await sendMarkup(
-            "Not Authorized user, deploy your own version", message, reply_markup
+            "Bukan pengguna yang sah, hubungi owner untuk meminta akses!", message, reply_markup
         )
 
 
 async def restart(client, message):
-    restart_msg = await sendMessage("Restarting...", message)
+    restart_msg = await sendMessage("Memulai ulang...", message)
     if scheduler.running:
         scheduler.shutdown(wait=False)
     if Interval:
@@ -163,7 +163,7 @@ async def main():
         )
     )
     bot.add_handler(MessageHandler(get_ip, filters=command(BotCommands.IpCommand)))
-    LOGGER.info("Bot Started!")
+    LOGGER.info("Bot Dimulai!")
     signal(SIGINT, exit_clean_up)
 
 
