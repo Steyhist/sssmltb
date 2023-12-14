@@ -1,4 +1,4 @@
-FROM sammax23/rcmltb
+FROM ssteyhist/sssmltb
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
