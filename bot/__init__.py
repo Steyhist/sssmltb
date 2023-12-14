@@ -1,5 +1,7 @@
-__version__ = "4.6"
-__author__ = "Sam-Max"
+__version__ = "1.0"
+__author__ = "Steyhist"
+__credit__ = "Max"
+__language__ = "Indonesia"
 
 from uvloop import install
 from asyncio import Lock
@@ -62,7 +64,7 @@ l_queue = Queue()
 
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 if len(BOT_TOKEN) == 0:
-    LOGGER.error("BOT_TOKEN variable is missing! Exiting now")
+    LOGGER.error("BOT_TOKEN variabel hilang! Keluar sekarang")
     exit(1)
 
 bot_id = BOT_TOKEN.split(":", 1)[0]
@@ -112,21 +114,21 @@ else:
 
 OWNER_ID = environ.get("OWNER_ID", "")
 if len(OWNER_ID) == 0:
-    LOGGER.error("OWNER_ID variable is missing! Exiting now")
+    LOGGER.error("OWNER_ID variabel hilang! Keluar sekarang")
     exit(1)
 else:
     OWNER_ID = int(OWNER_ID)
 
 TELEGRAM_API_ID = environ.get("TELEGRAM_API_ID", "")
 if len(TELEGRAM_API_ID) == 0:
-    LOGGER.error("TELEGRAM_API_ID variable is missing! Exiting now")
+    LOGGER.error("TELEGRAM_API_ID variabel hilang! Keluar sekarang")
     exit(1)
 else:
     TELEGRAM_API_ID = int(TELEGRAM_API_ID)
 
 TELEGRAM_API_HASH = environ.get("TELEGRAM_API_HASH", "")
 if len(TELEGRAM_API_HASH) == 0:
-    LOGGER.error("TELEGRAM_API_HASH variable is missing! Exiting now")
+    LOGGER.error("TELEGRAM_API_HASH variabel hilang! Keluar sekarang")
     exit(1)
 
 ALLOWED_CHATS = environ.get("ALLOWED_CHATS", "")
