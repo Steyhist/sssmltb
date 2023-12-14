@@ -1,9 +1,5 @@
 
-An Rclone Mirror-Leech Telegram Bot to transfer to and from many clouds. Based on [mirror-leech-telegram-bot](https://github.com/anasty17/mirror-leech-telegram-bot) with rclone support added, and other features and changes from base code.
-
-
-**NOTE**: Base repository added recently its own rclone implementation. 
-
+Repo Based on [mirror-leech-telegram-bot](https://github.com/anasty17/mirror-leech-telegram-bot) with rclone support added, and other features and changes from base code.
 
 ## Features:
 
@@ -76,7 +72,7 @@ restart - Restart bot
 - Clone repo:
 
 ```
-git clone https://github.com/Sam-Max/rcmltb rcmltb/ && cd rcmltb
+git clone https://github.com/Steyhist/sssmltb sssmltb/ && cd sssmltb
 ```
 
 - For Debian based distros
@@ -197,13 +193,13 @@ pip3 install -r requirements-cli.txt
 - Build Docker image:
 
 ```
-sudo docker build . -t rcmltb 
+sudo docker build . -t sssmltb 
 ```
 
 - Run the image:
 
 ```
-sudo docker run -p 80:80 -p 8080:8080 rcmltb
+sudo docker run -p 80:80 -p 8080:8080 sssmltb
 ```
 
 - To stop the container:
@@ -429,17 +425,5 @@ machine example.workers.dev password index_password
 ```
 
 Where host is the name of extractor (eg. instagram, Twitch). Multiple accounts of different hosts can be added each separated by a new line.
-
------
-
-## Donations
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/sammax09)
-
------
-
-## Bot Screenshot: 
-
-<img src="./screenshot.png" alt="button menu example">
 
 -----
